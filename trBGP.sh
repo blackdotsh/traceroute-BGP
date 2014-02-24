@@ -20,7 +20,7 @@ do
 	then
 		AS=$( echo $line | grep -E "\[AS.+?\] " -o | tr -d  "[]" | cut -d " " -f1 );
 		ASResult=$( whois -h whois.cymru.com " -v $AS" | tail -n 1 | cut -d "|" -f 5 );
-		echo "$line" | sed "s/\]/ \-\>$ASResult\]/1";
+		echo "$line" | sed "s/\]/:$ASResult\]/1";
  
 	else
 		echo "$line";
