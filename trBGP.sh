@@ -7,7 +7,7 @@
 
 if [[ -z "$1" ]]
 then
-	echo "IP argurement required. Run the program as: $0 IP_Here";
+	echo "IP argurement required. Run the program as: $0 HostHere";
 	exit 1;
 fi
 
